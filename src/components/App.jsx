@@ -1,16 +1,14 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+import React from 'react';
+import Statistics from 'components/Statistics/Statistics'
+
+const App = () =>
+  (
+    <>
+    <div>
+    <Statistics/>
     </div>
+    </>
   );
-};
+
+
+export default App;
