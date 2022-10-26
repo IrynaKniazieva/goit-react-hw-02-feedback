@@ -27,10 +27,16 @@ class App extends React.Component {
   };
 
   countTotalFeedback = () => {
-      this.setState(prevState => ({
-        total: prevState.good. + prevState.neutral + prevState.bad,
-      }))
-  }
+    //   this.setState(prevState => ({
+    //     total: prevState.good + prevState.neutral + prevState.bad,
+    //   }))
+
+//     const values = Object.values(this.state)
+//     let total = 0;
+
+//     for (const value of values) {
+//     total += value;
+//   }
 
   render () {
       return <div>
@@ -46,7 +52,7 @@ class App extends React.Component {
               <li>Good: {this.state.good}</li>
               <li>Neutral: {this.state.neutral}</li>
               <li>Bad: {this.state.bad}</li>
-              <li>Total: {}</li>
+              <li>Total:</li>
               <li>Positive feedback:</li>
           </ul>
       </div>
