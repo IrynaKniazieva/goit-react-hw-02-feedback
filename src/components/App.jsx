@@ -36,7 +36,7 @@ class App extends React.Component {
 
 //     for (const value of values) {
 //     total += value;
-//   }
+ }
 
   render () {
       return <div>
