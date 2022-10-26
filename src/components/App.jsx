@@ -26,11 +26,11 @@ class App extends React.Component {
       }));
   };
 
-  // countTotalFeedback = () => {
-  //     this.setState(prevState => ({
-  //       total: prevState.good + prevState.neutral + prevState.bad,
-  //     }))
-  // }
+  countTotalFeedback = () => {
+      this.setState(prevState => ({
+        total: prevState.good. + prevState.neutral + prevState.bad,
+      }))
+  }
 
   render () {
       return <div>
