@@ -22,21 +22,26 @@ class App extends React.Component {
 
   handleBad = () => { 
       this.setState(prevState => ({
+        
           bad: prevState.bad + 1,
       }));
   };
 
   countTotalFeedback = () => {
-    //   this.setState(prevState => ({
-    //     total: prevState.good + prevState.neutral + prevState.bad,
-    //   }))
+    
+  }
+//   countTotalFeedback = () => {
+//       return
+//         this.state.good + this.state.neutral + this.state.bad;
+//       }
 
 //     const values = Object.values(this.state)
-//     let total = 0;
+//     
+//  }
 
-//     for (const value of values) {
-//     total += value;
- }
+countPositiveFeedbackPercentage = () => {
+
+}
 
   render () {
       return <div>
