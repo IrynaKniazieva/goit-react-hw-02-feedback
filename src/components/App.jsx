@@ -1,5 +1,6 @@
 import React from 'react';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 
 
 class App extends React.Component {
@@ -9,24 +10,31 @@ class App extends React.Component {
       bad: 0
   }
 
-  handleGood = () => { 
-      this.setState(prevState => ({
-          good: prevState.good + 1,
-      }));
+  handleButton = label=> {
+    this.setState(prevState => {
+        return {[label]: prevState[label] + 1};
+    });
   };
 
-  handleNeutral = () => { 
-      this.setState(prevState => ({
-          neutral: prevState.neutral + 1,
-      }));
-  };
 
-  handleBad = () => { 
-      this.setState(prevState => ({
+//   handleGood = () => { 
+//       this.setState(prevState => ({
+//           good: prevState.good + 1,
+//       }));
+//   };
+
+//   handleNeutral = () => { 
+//       this.setState(prevState => ({
+//           neutral: prevState.neutral + 1,
+//       }));
+//   };
+
+//   handleBad = () => { 
+//       this.setState(prevState => ({
         
-          bad: prevState.bad + 1,
-      }));
-  };
+//           bad: prevState.bad + 1,
+//       }));
+//   };
 
   countTotalFeedback = () => {
     // const { good, bad, neutral } = this.state;
@@ -40,11 +48,10 @@ class App extends React.Component {
   render () {
       return <div>
       <h1>Please leave feedback</h1>
-      <div>
-          <button type="button" onClick={this.handleGood}>Good</button>
-          <button type="button" onClick={this.handleNeutral}>Neutral</button>
-          <button type="button" onClick={this.handleBad}>Bad</button>
-      </div>
+      <FeedbackOptions 
+      
+      onLeaveFeedback = {this.handleButton(this.state)} />
+      
       <Statistics
       good = {this.state.good}
       neutral = {this.state.neutral}
@@ -57,3 +64,4 @@ class App extends React.Component {
 
 
 export default App;
+
