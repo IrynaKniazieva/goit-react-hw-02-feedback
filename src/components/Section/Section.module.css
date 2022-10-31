@@ -1,5 +1,4 @@
-.section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title {
+    padding-top: 10px;
+    padding-left: 20px;
 }
